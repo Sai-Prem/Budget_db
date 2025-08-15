@@ -6,11 +6,11 @@ from datetime import date
 app = Flask(__name__)
 app.secret_key = 'your_secret_key'  # Change this in production
 
-# MySQL configuration
+# MySQL configuration, change it accordingly
 DB_CONFIG = {
     'host': 'localhost',
     'user': 'root',
-    'password': '144kriya144',  # Change this to your MySQL password
+    'password': '',  # Change this to your MySQL password
     'database': 'budget_db'
 }
 
@@ -191,4 +191,5 @@ def edit_transaction():
     return redirect(url_for('dashboard'))
 
 if __name__ == '__main__':
+
     app.run(debug=True) 
