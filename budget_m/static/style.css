@@ -1,0 +1,84 @@
+html, body {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden;
+    background: linear-gradient(135deg, #e0eafc 0%, #cfdef3 100%);
+    font-size: 1.15rem;
+}
+
+.bubble-bg {
+    position: fixed;
+    top: 0; left: 0; right: 0; bottom: 0;
+    z-index: 0;
+    overflow: hidden;
+    pointer-events: none;
+}
+.bubble {
+    position: absolute;
+    bottom: -120px;
+    border-radius: 50%;
+    opacity: 0.22;
+    background: radial-gradient(circle at 30% 30%, #fff 90%, #f8f9fa 100%);
+    animation: bubbleUp 12s linear infinite;
+}
+.bubble.b1 { left: 10%; width: 60px; height: 60px; animation-duration: 10s; animation-delay: 0s; }
+.bubble.b2 { left: 25%; width: 40px; height: 40px; animation-duration: 14s; animation-delay: 2s; }
+.bubble.b3 { left: 40%; width: 80px; height: 80px; animation-duration: 16s; animation-delay: 4s; }
+.bubble.b4 { left: 60%; width: 50px; height: 50px; animation-duration: 12s; animation-delay: 1s; }
+.bubble.b5 { left: 75%; width: 70px; height: 70px; animation-duration: 18s; animation-delay: 3s; }
+.bubble.b6 { left: 85%; width: 30px; height: 30px; animation-duration: 11s; animation-delay: 5s; }
+.bubble.b7 { left: 5%; width: 35px; height: 35px; animation-duration: 13s; animation-delay: 2.5s; }
+.bubble.b8 { left: 18%; width: 55px; height: 55px; animation-duration: 15s; animation-delay: 1.2s; }
+.bubble.b9 { left: 33%; width: 25px; height: 25px; animation-duration: 12s; animation-delay: 3.7s; }
+.bubble.b10 { left: 52%; width: 65px; height: 65px; animation-duration: 17s; animation-delay: 2.8s; }
+.bubble.b11 { left: 68%; width: 38px; height: 38px; animation-duration: 14s; animation-delay: 4.1s; }
+.bubble.b12 { left: 92%; width: 45px; height: 45px; animation-duration: 16s; animation-delay: 0.9s; }
+
+@keyframes bubbleUp {
+    0% {
+        transform: translateY(0) scale(1);
+        opacity: 0.18;
+    }
+    80% {
+        opacity: 0.95;
+    }
+    100% {
+        transform: translateY(-110vh) scale(1.2);
+        opacity: 0;
+    }
+}
+
+.main-centered {
+    min-height: calc(110vh - 80px);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.navbar-brand {
+    font-weight: bold;
+}
+
+.container {
+    max-width: 1000px;
+}
+
+.card {
+    box-shadow: 0 4px 16px rgba(0,0,0,0.08);
+    border-radius: 12px;
+}
+
+.home-btns .btn {
+    margin: 0 8px 0 0;
+    transition: transform 0.15s cubic-bezier(.4,2,.6,1), box-shadow 0.15s;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.04);
+}
+.home-btns .btn:last-child {
+    margin-right: 0;
+}
+.home-btns .btn:hover {
+    transform: translateY(-10px) scale(1.35);
+    box-shadow: 0 6px 20px rgba(0,0,0,0.10);
+} 

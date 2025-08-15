@@ -1,0 +1,26 @@
+{% extends 'base.html' %}
+{% block title %}Home - Budget Manager{% endblock %}
+{% block content %}
+<div class="bubble-bg">
+    <div class="bubble b1"></div>
+    <div class="bubble b2"></div>
+    <div class="bubble b3"></div>
+    <div class="bubble b4"></div>
+    <div class="bubble b5"></div>
+    <div class="bubble b6"></div>
+</div>
+<div class="main-centered">
+    <div class="card p-5 text-center">
+        <h1>Welcome to Budget Manager</h1>
+        <p class="lead">Track your budgets and expenses easily.</p>
+        <div class="home-btns d-flex justify-content-center mt-4">
+        {% if 'user_id' in session %}
+            <a href="/dashboard" class="btn btn-primary">Go to Dashboard</a>
+        {% else %}
+            <a href="/login" class="btn btn-primary me-2">Login</a>
+            <a href="/register" class="btn btn-secondary">Register</a>
+        {% endif %}
+        </div>
+    </div>
+</div>
+{% endblock %} 
